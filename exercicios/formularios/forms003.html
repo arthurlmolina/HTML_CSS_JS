@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 220px;
+            margin: 0 auto;
+        }
+        button{
+            display: block;
+            width: 100px;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>legend</legend>
+            <p>
+                <label for="iemail">email</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="inum">celular</label>
+                <input type="tel" name="num" id="inum" required pattern="^\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}$">
+                <!--
+                ^ = inicio da expressão regular
+                $ = fim da expressão regular
+                \([0-9]{2}\)[0-9]{4,5}-[0-9]{4}
+                -->
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </p>
+
+    </form>
+</body>
+</html>

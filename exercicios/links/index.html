@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalhando com links</title>
+</head>
+<body>
+    <h1>usando links externos</h1>
+    <p>para acessar a biblia online basta clicar<a href="https://www.bibliaonline.com.br/" target="_blank" rel="external"> aqui</a></p>
+    
+    <!-- target="_blank" para o link abrir em uma nova pagiana-->
+     <!--target="_self" para indicar que o link é do seu próprio site-->
+
+    <!--rel="external" indicar ao navegador que é um link externo-->
+    <!--rel="nofollow" para dizer ao mecanismo de busca que está pagina não possui o seu aval-->
+    <!--rel="next" indicar ao navegador que o link é em uma pagina pra frente do próprio site-->
+    <!--rel="prev" indicar ao navegador que o link é em uma pagina pra anterior do próprio site-->
+    
+
+    <h2>usando links internos</h2>
+    <p>está é a primeira página</p>
+    <a href="pag002.html" target="_self" ref="next">página 2<br></a>
+    <a href="teste/pag003.html" target="_self" ref="next">página de teste<br></a>
+    <a href="curriculo/Currículo.pdf" download="curriculo.pdf" type="application/pdf">baixar meu currículo<br></a>
+    <a href="curriculo/Currículo.zip" download="curriculo.zip" type="application/zip">baixar meu curriculo zipado</a>
+    <!--https://www.iana.org/assignments/media-types/media-types.xhtml para pesquisar o os "type"-->
+</body>
+</html>

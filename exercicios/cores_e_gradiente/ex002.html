@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        * {
+            /* 
+            * é a configuração gloval da CSS
+            */
+            height: 100%;
+        }
+
+        h1{
+            background-image: linear-gradient(to bottom, white, blue);
+
+            /*
+            background-image: radial-gradient(circle, white, blue);
+            pode-se usar radial-gradient para fazer o gradiente em forma de circulo por exemplo
+            */
+
+            /*
+            direções do degradê
+            to right para direita
+            to left para esquerda
+            to bottom de cima para baixo
+            to top de baixo para cima
+            */
+            background-attachment: fixed;
+            /*para a página não ficar passando e talvez saindo das configurações de gradiente por exemplo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>testando gradiente (degradê)</h1>
+</body>
+</html>

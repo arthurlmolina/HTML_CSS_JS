@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            /*
+            medidas absolutas: 
+
+             - cm
+             - mm
+             - in (polegada)
+             - px (pixel) 
+             - pt (ponto)
+             - pc (paica)
+
+             as medidas absolutas possuem um problema pois a tela dos dispositivos variam, e podem ter até mesmo um pixel de diferente tamanho[como a tela de retina da apple 1 px == 1/4 px] então o navegador pode nem sempre chegar a uma apresentação igual a todos os usuários
+             - pt e pc são recurso da tipografia, não se recomenda usar em material impresso em tela digital
+            */
+            /*------------------------------------------------------------*/
+            /*medidas relativas:
+
+            - em (relativa ao tamanho atual da fonte) [altura m] baseado no m maiúsculo da fonte
+
+            - ex (relativo a altura-x de uma fonte)   [altura-x]
+
+
+            - rem (relativo ao root) [fonte que está configurada no body]
+
+            - vw (view widht[largura da view port, ou seja, largura do tamanho da sua tela])
+
+            - vh (view height[altura da view port, ou seja, altura do tamanho da sua tela])
+
+            - %
+            */
+
+            /*px e em são recomendados pela w3c
+            
+            16px geralmente é igual a 1em
+
+            */
+            font-weight: bold ; 
+            /* lighter normal bold bolder [nem todas as fontes possuem compatibilidade com toas esses pesos]*/
+            /*ou pode utilizar a medida de 100 - 200... - 900, porém, a maioria das fontes não tem todas as numerações */
+
+            /*
+            weight: peso
+            widht: largura
+            height: altura
+            */
+
+            font-style: italic;
+            text-decoration: underline;
+
+            /*neste caso a familia da fonte precisa ser compatível com todos esses estilos (bold,italic,underline)*/
+
+            /*
+            font-style: italic;
+            font-weight: bold;
+            font-size: 3m;
+            font-family: 'Courier New', Courier, monospace;
+        
+                              [shorthand font]
+
+            font-style -> font-weight -> font-size -> font-family
+            
+            essas css se condensão no comando 
+            font: italic bold 3m 'Courier New', Courier, monospace;
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>titulo 1</h1>
+    <p>testando texto estou testando para testar os estilos css usando também html, pois sem html o css não tem utilidade eu acho, talvez esse tanto de texto já sej suficiente para testar o design do meu código html com css porque eu estou testando para usar no meu texto para usar o design</p>
+    <p>testando texto estou testando para testar os estilos css usando também html, pois sem html o css não tem utilidade eu acho, talvez esse tanto de texto já sej suficiente para testar o design do meu código html com css porque eu estou testando para usar no meu texto para usar o design</p>
+    <h1>titulo 2</h1>
+    <p>testando texto estou testando para testar os estilos css usando também html, pois sem html o css não tem utilidade eu acho, talvez esse tanto de texto já sej suficiente para testar o design do meu código html com css porque eu estou testando para usar no meu texto para usar o design</p>
+</body>
+</html>

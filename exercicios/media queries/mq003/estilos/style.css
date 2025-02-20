@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@media all{
+/* global settings */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(44, 64, 93);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+body{
+    background-position: top bottom;
+}
+
+h1{
+    padding: 10px;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(28, 40, 58, 0.864) ;
+}
+}
+@media screen and (orientation:portrait) {
+    /* settings in portrait mode */
+
+    body{
+        background-image: url(../imagens/portrait.png);
+    }
+        
+}
+
+@media screen and (orientation:landscape){
+    /* settings in landscape mode */
+
+    body{
+        background-image: url(../imagens/landscape.png);
+
+    }
+}

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* settings in landscape mode */
+
+body{
+    background-image: url(../imagens/landscape.png);
+
+}

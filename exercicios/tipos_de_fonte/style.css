@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Sixtyfour+Convergence&display=swap');
+
+@font-face {
+    font-family: 'belg';
+    src: url('fonts/Belgiano Serif 2.otf') format('opentype'), url('fonts/Belgiano Serif 2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    /*
+    Tipos de format()
+    - opentype (otf) geralmente
+    - truetype (ttf) geralmente
+    - embedded-opentype
+    - truetype-aat (Apple Advanced Typography)
+    - svg
+    */
+
+
+    /*
+    em HTML é id    = em CSS é #
+    em HTML é class = em CCS é .
+    não se pode usar o mesmo id em mais de um documento, neste caso usa-se o class
+    */
+}
+
+body{
+    background-image: linear-gradient(to right, #335C81,  #90C2E7);
+    
+}
+main{
+    background-color: #EEF0F2 ;
+    width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #335C81;
+}
+
+h1{
+    text-align: center;
+    color: #73A57E ;
+    text-shadow: 1px 1px 2px #73a57eb7;
+    font-family:'belg';
+    font-style: normal;
+    color:#73A57E
+
+}
+h2{
+    color: #DE9E36;
+}
+
+h2#teste{
+    color: #335C81;
+}
+
+p{
+    text-align: justify;
+    text-indent: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+span#otherdestaque{
+    color: #3ba3fe;
+}
+
+.destaque{
+    background-color: rgba(238, 241, 89, 0.445);
+}
+
+.sublinhado{
+    text-decoration: underline;
+}

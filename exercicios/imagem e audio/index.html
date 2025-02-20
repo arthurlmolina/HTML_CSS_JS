@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em html</title>
+</head>
+<body>
+    <h1>imagens dinânimicas</h1>
+    <picture> 
+        <source media="(max-width:850px )" srcset="imagens/foto-p.png">
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png">
+        <img src="imagens/foto-g.png" alt="foto grande">
+    </picture>
+
+    <h1>Reorduzindo audio</h1>
+    <p>em HTML5</p>
+    <!--
+    <audio src="midia/Rain Heavy Quiet Interior.mp3" controls autoplay ></audio>
+    isso pode possuir pouca compatibilidade com o navegador-->
+
+    <!--
+    controls é para aparecer uma painel de  controle do audio 
+    autoplay é para começar a tocar automatico a musica quando o navegador for aberto
+    loop volta o audio quadno encerrar
+    ]-->
+    <!-- para maior compatibilidade: -->
+    <audio preload="auto" autoplay controls  loop>
+        <!--
+        preload=" "
+        auto: ele so considera que o site termninou de carregar só quando o audio carrega tambem, podendo gerar um atrso na inicialização
+        metadata: ele vai carregadr só o nome do arquivo, data, duração
+        none: so carrega algo quando o usuario aperta o play no controles
+
+        -->
+        <source src="midia/Rain Heavy Quiet Interior.mp3" type="audio/mpeg">
+        <!--caso o mp3 não funcionar ele faz a tag de baixo, com outro tipo de arquivo-->
+        <source src="midia/Rain Heavy Quiet Interior.mp3" type="audio.ogg">
+        <p>infelizmente o navegador não é compativel com este tipo de arquivo</p>
+        <a href=""> clique aqui para baixar</a>
+
+    </audio>
+</body>
+</html>

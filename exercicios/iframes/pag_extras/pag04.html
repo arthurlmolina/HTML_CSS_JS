@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="data">
+    <button type="button" onclick="clique()"> clique aqui </button>
+    <p id="campo"></p>
+    <script>
+        data = document.getElementById('data'); // pega o input
+        
+        function clique(){
+            campo = document.getElementById('campo'); // pega o paragrafo
+            campo.innerHTML += `<br> voce clicou`
+        }
+    </script>
+</body>
+</html>

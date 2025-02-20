@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e Pseudo-element</title>
+    <style>
+        a{
+            color: blue;
+            text-decoration: none;
+            font: normal 16px arial
+        }
+
+        a:visited{
+            color: rgb(25, 255, 197);
+        }
+        a:hover{
+            text-decoration: underline;
+            color: blue;
+            width: 1px;
+            background-color: black;
+        }
+
+        a:active{
+            background-color: rgb(90, 247, 247);
+            width: 1px;
+            color: black;
+        }
+
+        .especial::after{
+            /*
+            :: é pseudo-element
+            : é pseudo-class
+            */
+            content: ' --';
+        }
+
+        .especial{
+            background-color: cornflowerblue;
+        }
+
+        .especial::before{
+            content: '-- ';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gemini.google.com/app" target="_blank">gemini</a></li>
+        <li><a href="https://www.youtube.com/?app=desktop&hl=pt" target="_blank">youtube</a></li>
+        <li><a href="https://www.bibliaonline.com.br/acf/livros" target="_blank" class="especial">biblia online</a></li>
+    </ul>
+
+</body>
+</html>

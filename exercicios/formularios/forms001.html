@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!--
+        autocomplete="off" para os campos nao aparecerem automaticamente preenchimentos passados
+
+        MÉTODOS
+        padrão: GET (envio de até 3000 bytes)
+        POST: mais seguro, não mostra os dados na URL
+
+        -->
+
+        <p> <label for="inome">usuário: </label>
+            <input type="text" name="nome" id="inome" required minlength="3" maxlength="20" size="20" placeholder="nome do usuário" autocomplete="username">    
+            <!-- 
+            minlength: mínimo de caracteres
+            maxlength: máximo de caracteres
+            -->
+            <!-- required: campo obrigatório -->
+        </p>
+        <p>
+            <label for="isobrenome">senha:</label>
+            <input type="password" name="sobrenome" id="isobrenome" required minlength="8" maxlength="20" size="20" placeholder="senha do usuário" autocomplete="new-password">
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

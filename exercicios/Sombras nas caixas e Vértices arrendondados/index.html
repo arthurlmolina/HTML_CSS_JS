@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras nas caixas e Vértices arrendondados</title>
+    <style>
+        h1{
+            box-shadow: 2px 2px 5px black;
+            display: inline-block;
+        }
+        div{
+            color: cornflowerblue;
+            width: 150px;
+            height: 150px;
+            border: 10px solid rgb(18, 87, 62) ;
+            padding: 2px;
+            outline: 5px dashed rgba(30, 137, 112, 0.493);
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 1px 1px 5px rgb(18, 87, 62);
+        }
+        h2{
+            /*border-image-source: url('borda.png');
+            border-image-slice: 20;
+            border-image-repeat: repeat;*/
+            border-image: url('borda.png') 27 repeat; /*shorthand*/
+        }
+    </style>
+</head>
+<body>
+    <h1>TESTANDO SOMBRAS</h1> 
+
+    <div>
+        esta é minha div
+    </div>
+    <h2>borda personalizada</h2>
+</body>
+</html>

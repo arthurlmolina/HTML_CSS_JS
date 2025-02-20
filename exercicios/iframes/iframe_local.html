@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe local</title>
+    <style>
+        a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="pag_extras/pag01.html" target="iframe">pagina 1</a><br>
+    <a href="pag_extras/pag02.html" target="iframe">pagina 2</a><br>
+    <a href="pag_extras/pag03.html" target="iframe">pagina 3</a>
+    <a href="pag_extras/pag04.html" target="iframe">pagina 4</a>
+
+    <iframe name="iframe" src="pag_extras/pag01.html" frameborder="1" height="300px" width="500px"></iframe>
+
+    <!--
+    sandbox="sandbox" - bloqueio máximo do iframe (segurança)
+    referpolice="no-referrer" - o iframe não vai capturar dados de navegação
+    essas duas configurações ligam o maximo de segruança no iframe
+
+    sandbox="allow-same-origin" (permite se estiver no mesmo servidor) "allow-forms" (permite formularios) "allow-scripts" (permite scripts) "allow-popups" (permite popups) "allow-top-navigation" (permite navegação no topo)
+    -->
+    <a href="pag2.html">pagina 2</a>
+</body>
+</html>

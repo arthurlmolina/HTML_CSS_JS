@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Video hospedados localmente</h1>
+    <p>este video esta hospedado em meu proprio servidor</p>
+    <!--assim como o audio o video é melhor fazer desse jeito abaixo para aumentar a compatibilidade com outros navegadores-->
+    <video poster="imagens/capa.jpg" width="200px" controls>
+        <source src="midia/natureza.mp4" type="video/mp4">
+        <source src="midia/natureza.webm" type="video/webm">
+        <p>seu navegador não tem compatibilidade com reprodução deste video</p>
+    </video>
+    <h1> Inserindo video do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7o3g67GIIWo?si=eeAIm4Z_aqA4no3j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- COM O VIDEO NO YOUTUBE O VIDEO GANHA MAIS SCORE COM O GOOGLE E NÃO UTILIZA ESAPÇO DO SERVIDOR ONDE O SITE ESTÁ HOSPEDADO-->
+
+    <!--vimeo é uma boa opção para quem deseja que o video não seja publico, como video no youtube, tem a qualidade de video boa, porem trava um pouco mais se a internet do usuário não estiver tão boa -->
+</body>
+</html>

@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* settings in portrait mode */
+
+body{
+    background-image: url(../imagens/portrait.png);
+}

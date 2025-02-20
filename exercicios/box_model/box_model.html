@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        h1{
+            /*
+            display: inline; para transformar em inline-level
+            porem não da para por hieght nem width, neste caso daria certo o certo inline-block
+            */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            /*------------------------------------------------------------------------------------------*/
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*shorthand*/
+            padding: 10px 10px 10px 10px;
+
+            /*ou somente padding: 10px; porque todo os lados são iguais
+
+            para em top==bottom e right==left padding=10px(top/bottom) 20px;(right/left)
+             */
+            /*------------------------------------------------------------------------------------------*/
+            
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgb(47, 79, 79);
+            /*shorthand*/
+            border: 10px solid rgb(47, 79, 79);
+            /*------------------------------------------------------------------------------------------*/
+           
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: aquamarine;
+            /*shorthand*/
+            outline: 5px dashed aquamarine;
+            /*------------------------------------------------------------------------------------------*/
+            
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            /*shorthand*/
+
+            margin: 10px auto 10px auto;
+
+            /*ou somente margin: 10px; porque todo os lados são iguais
+
+            para em top==bottom e right==left margin=10px(top/bottom) 20px;(right/left)
+             */
+            
+            /*------------------------------------------------------------------------------------------*/
+
+        }
+        p#solid{
+            border-style: solid ;
+        }
+        p#double{
+            border-style: double ;
+        }
+        p#dashed{
+            border-style: dashed ;
+        }
+        p#groove{
+            border-style: groove ;
+        }
+        p#dotted{
+            border-style: dotted ;
+        }
+
+        a{
+            border-style: solid;
+            border-color: aqua;
+            border-width: 10px;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Este é um exemplo de uma box_level</h1>
+    <p>paragrafos também são um exemplo disso, já os <a href="#">links são um inline level</a>, vamos ver como tudo isso funciona</p>
+    <p id="solid">border solid</p>
+    <p id="double">border double</p>
+    <p id="dashed">border dashed</p>
+    <p id="groove">border groove</p>
+    <p id="dotted">border dotted</p>
+</body>
+</html>
