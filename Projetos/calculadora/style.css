@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.operadores-aritmeticos {
+    background-color: rgb(255, 120, 0);
+}
+
+.operadores-aritmeticos:hover {
+    background-color: rgb(255, 140, 0);
+}
+
+.res{
+    background-color: rgb(15, 187, 15); 
+}
+.res:hover{
+    background-color: rgb(15, 207, 15);
+}
