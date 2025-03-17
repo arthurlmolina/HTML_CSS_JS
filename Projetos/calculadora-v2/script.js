@@ -66,6 +66,20 @@ function calculate(){
             DISPLAY.textContent = 'Display';
             return;
         }
+        
+        //replace what is not a number or operator for for a void string ''
+
+        //create a regEx HERE
+
+        /* 
+        / / = delimiters of the regEx
+        [^ ] = is a negation
+        0-9 = all numbers
+        +*-/ = all operators
+        g = global, to replace all ocurrences
+        resuming, all that is not a number and operator is replaced by ''
+        */
+
 
         //calculate the expression
         const RESULT = calculateExpression(expression); 
@@ -73,4 +87,11 @@ function calculate(){
     } catch (error){
         DISPLAY.textContent = 'ERROR';
     }
+}
+
+
+
+
+function calculateExpression(expression){
+    return new Function('return ' + expression)();
 }
