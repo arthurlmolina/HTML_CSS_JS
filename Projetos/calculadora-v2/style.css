@@ -1,16 +1,41 @@
 @charset "UTF-8";
 
+
+
+h1{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+#resp{
+    height: 50px;
+    border-radius: 3px;
+    font-size: 1.5em;
+    align-items: center;
+
+}
+
 .operadores-aritmeticos {
     background-color: rgb(255, 120, 0);
 }
 
 .operadores-aritmeticos:hover {
     background-color: rgb(255, 140, 0);
+
 }
 
 .res{
-    background-color: rgb(15, 187, 15); 
+    background-color: rgb(15, 187, 15);
 }
+
 .res:hover{
-    background-color: rgb(15, 207, 15);
+    background-color: rgb(8, 136, 8);
+}
+
+.btn{
+    font-size: 1.5em;
+}
+
+.btn-primary{
+    font-size: 1.5em;
 }
