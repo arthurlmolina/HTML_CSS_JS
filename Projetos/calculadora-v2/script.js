@@ -6,36 +6,10 @@ function add(num) {
     if (display.textContent === 'Display') {
         display.textContent = '';
     }
+    
+    display.textContent += num;
 
-    //let num = display.textContent.slice(-1);
-    let lastChar = display.textContent.slice(-1);
-    let penultimateChar = display.textContent.slice(-2, -1);
-
-    //slice(-1) returns the last character of the string
-    const OPERATORS = ['+', '-', '*', '/'];
-
-
-    //verify if the last char is a operator
-    if (OPERATORS.includes(lastChar)) {
-        //if the new char is a operator too
-        if (OPERATORS.includes(num)) {
-            //allow add "-" after other operator (for negative numbers)
-            if ((num === '-' && lastChar !== '-')) {
-                display.textContent += num;
-            } else {
-                //replace the last operator for the new one
-                display.textContent = display.textContent.slice(0, -1) + num;
-                //slice(0, -1) returns the string without the last character
-            }
-        } else{
-            //add normally when the last char is not a operator
-            display.textContent += num;
-        }
-    } else {
-        //add normally when the last char is not a operator
-        display.textContent += num;
-    }
-
+    OPERATORS = ['=', '-', '*', '/'];
 
 }
 
