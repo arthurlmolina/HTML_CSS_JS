@@ -1,54 +1,89 @@
-document.addEventListener('DOMContentloaded', function() { /*Running script after the page has loaded fully*/
-    const display = document.getElementById('resp');
 
-    //variables to store values and state
-    let firstNumber = null;
-    let operator = null;
-    let newNumber = true;
-    let result = null; 
+function add(num) {
+    let display = document.getElementById('resp');
+    OPERATORS = ['-', '*', '/', '+', '.'];
 
-    // function to update the display
-    function updateDisplay(value){
-        display.textContent = value;
+    //if a number is clicked, the display is cleared
+    if (display.textContent === 'Display') {
+        display.textContent = '';
     }
 
-    // initialize the display
-    updateDisplay('0');
+    //block the user to type a operator or dot in the first character
+    if (display.textContent === '' && OPERATORS.includes(num)){
+        display.textContent = 'Display';
+        return;
+    } 
+    
+    //if the last character is an operator or dot and user type other operator or a new dot,the new replace the old
+    if(OPERATORS.includes(num) && OPERATORS.includes(display.textContent.slice(-1))){
+        display.textContent = display.textContent.slice(0, -1) + num;
+    } else{
+        display.textContent += num;
+    }
 
-    // add event to the number buttons
-    ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'].forEach(function(id, indice){
-        document.getElementById(id).addEventListener('click', function(){
-            // if we are starting a new number, clear the display
-            if (newNumber){
-                updateDisplay('');
-                newNumber = false;
-            }
-            //add the digit to the display
-            updateDisplay(display.textContent + indice);
-        });
-    });
-    //add event to the operator buttons
-    ['adicao', 'sub', 'mult', 'divid'].forEach(function(id){
-        //if there ir an operator and it is not a new number, calculate the result
-        if (operator && !newNumber){
-            calcular();
+    //for the display dont surprase the div size
+    if (display.textContent.length > 28){
+        display.textContent = display.textContent.slice(0,28);
+    }
+}
+
+function calculate() {
+    const display = document.getElementById('resp');
+    let expression = display.textContent;
+
+    if (expression === 'Display') {
+        return;
+    }
+
+    //use try when the expression can be invalid and catch when the error is resolved 
+    try {
+        //remove the operator in the last of expression
+        const OPERATORS = ['+', '-', '*', '/'];
+        while (OPERATORS.includes(expression.slice(-1))) {
+            expression = expression.slice(0, -1);
         }
-
-        //store the first number and the operator
-        firstNumber = parseFloat(display.content);
-        operator = this.textContent;
-        newNumber = true;
-    });
-
-    //add event to the result button
-    document.getElementById('result').addEventListener('click', function(){
-        calcular();
-    });
-
-    //function to calculate the result
-    function calcular(){
-        if (operator === null || newNumber){
+        if (expression === '') {
+            display.textContent = 'Display';
             return;
         }
+
+        //replace what is not a number or operator for for a void string ''
+
+        let sanitizedExpression = expression.replace(/[^0-9+*-/.]/g, '');
+
+        /* 
+        / / = delimiters of the regEx
+        [^ ] = is a negation
+        0-9 = all numbers
+        +*-/ = all operators
+        g = global, to replace all ocurrences
+        resuming, all that is not a number and operator is replaced by ''
+        */
+
+        //calculate the expression
+        let result = new Function('return ' + sanitizedExpression)();
+        display.textContent = result;
+    } catch (error) {
+        display.textContent = 'ERROR';
     }
-});
+}
+
+function clearAll(){
+    //clear the display
+    document.getElementById('resp').textContent = 'Display';
+}
+
+function clearLast(){
+
+    let display = document.getElementById('resp');
+
+    if (display.textContent === 'Display'){
+        return;
+    }
+    //remove the last character typed
+    display.textContent = display.textContent.slice(0, -1);
+    if (display.textContent === ''){
+        display.textContent = 'Display';
+    }
+
+}
