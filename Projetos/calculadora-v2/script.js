@@ -1,6 +1,7 @@
 
 function add(num) {
     let display = document.getElementById('resp');
+    OPERATORS = ['=', '-', '*', '/'];
 
     //if a number is clicked, the display is cleared
     if (display.textContent === 'Display') {
@@ -8,10 +9,24 @@ function add(num) {
     }
     
     display.textContent += num;
+    lastChar = display.textContent.slice(-1);
+    espressionLess2 = display.textContent.slice(0, -2); 
 
-    OPERATORS = ['=', '-', '*', '/'];
+    //if the last character is an operator and user type other oeprator,the new replace the old
+    if (OPERATORS.includes(num)){
+        if (OPERATORS.includes(lastChar)){
+            display.textContent = espressionLess2 + num; 
+        }
+    }
 
+    //for the display dont surprase the div size
+    if (display.textContent.length >29){
+        display.textContent = display.textContent.slice(0,29);
+    }
+
+    
 }
+
 
 function calculate() {
     const display = document.getElementById('resp');
