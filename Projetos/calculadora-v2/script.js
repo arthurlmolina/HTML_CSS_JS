@@ -22,8 +22,8 @@ function add(num) {
     }
 
     //for the display dont surprase the div size
-    if (display.textContent.length >29){
-        display.textContent = display.textContent.slice(0,29);
+    if (display.textContent.length > 28){
+        display.textContent = display.textContent.slice(0,28);
     }
 }
 
@@ -68,4 +68,22 @@ function calculate() {
     }
 }
 
-clear()
+function clearAll(){
+    //clear the display
+    document.getElementById('resp').textContent = 'Display';
+}
+
+function clearLast(){
+
+    let display = document.getElementById('resp');
+
+    if (display.textContent === 'Display'){
+        return;
+    }
+    //remove the last character typed
+    display.textContent = display.textContent.slice(0, -1);
+    if (display.textContent === ''){
+        display.textContent = 'Display';
+    }
+
+}

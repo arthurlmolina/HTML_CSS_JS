@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 h1{
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
@@ -14,7 +12,6 @@ h1{
     align-items: center;
     max-width: 400px;
     margin: auto;
-
 }
 
 .operadores-aritmeticos {
@@ -23,7 +20,6 @@ h1{
 
 .operadores-aritmeticos:hover {
     background-color: rgb(255, 140, 0);
-
 }
 
 .res{

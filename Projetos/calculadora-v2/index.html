@@ -18,9 +18,22 @@
             <div class="card">
                 <div class="card-body">
                     <h1>Calculadora</h1>
+                    <!--DISPLAY-->
                     <div class="row m-3">
                         <div class="col-12 bg-primary py-2" style="text-align: center; color: white;" id="resp">Display</div>
                     </div>
+                    
+                    <!--ROW 0-->
+                    <div class="row m-3">
+                        <div class="col-6 d-grid">
+                            <button class="btn btn-danger" onclick="clearAll()">AC</button>
+                        </div>
+                        <div class="col-6 d-grid">
+                            <button class="btn btn-danger" onclick="clearLast()">DEL</button>
+                        </div>
+                    </div>
+
+                    <!--ROW 1-->
                     <div class="row m-3">
                         <div class="col-3 d-grid">
                             <button class="btn btn-primary" onclick="add('7')">7</button>
@@ -35,6 +48,7 @@
                             <button class="btn btn-warning operadores-aritmeticos" onclick="add('+')">+</button>
                         </div>
                     </div>
+                    <!--ROW 2-->
                     <div class="row m-3">
                         <div class="col-3 d-grid">
                             <button class="btn btn-primary" onclick="add('4')">4</button>
@@ -49,6 +63,7 @@
                             <button class="btn btn-warning operadores-aritmeticos" onclick="add('-')">-</button>
                         </div>
                     </div>
+                    <!--ROW 3-->
                     <div class="row m-3">
                         <div class="col-3 d-grid">
                             <button class="btn btn-primary" onclick="add('1')">1</button>
@@ -63,6 +78,7 @@
                             <button class="btn btn-warning operadores-aritmeticos" onclick="add('*')">*</button>
                         </div>
                     </div>
+                    <!--ROW 4-->
                     <div class="row m-3" style="justify-content: end;">
                         <div class="col-3 d-grid">
                             <button class="btn btn-primary" onclick="add('.')">.</button>
