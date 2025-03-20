@@ -1,32 +1,31 @@
 
 function add(num) {
     let display = document.getElementById('resp');
-    OPERATORS = ['=', '-', '*', '/'];
+    OPERATORS = ['-', '*', '/', '+', '.'];
 
     //if a number is clicked, the display is cleared
     if (display.textContent === 'Display') {
         display.textContent = '';
     }
-    
-    display.textContent += num;
-    lastChar = display.textContent.slice(-1);
-    espressionLess2 = display.textContent.slice(0, -2); 
 
-    //if the last character is an operator and user type other oeprator,the new replace the old
-    if (OPERATORS.includes(num)){
-        if (OPERATORS.includes(lastChar)){
-            display.textContent = espressionLess2 + num; 
-        }
+    //block the user to type a operator or dot in the first character
+    if (display.textContent === '' && OPERATORS.includes(num)){
+        display.textContent = 'Display';
+        return;
+    } 
+    
+    //if the last character is an operator or dot and user type other operator or a new dot,the new replace the old
+    if(OPERATORS.includes(num) && OPERATORS.includes(display.textContent.slice(-1))){
+        display.textContent = display.textContent.slice(0, -1) + num;
+    } else{
+        display.textContent += num;
     }
 
     //for the display dont surprase the div size
     if (display.textContent.length >29){
         display.textContent = display.textContent.slice(0,29);
     }
-
-    
 }
-
 
 function calculate() {
     const display = document.getElementById('resp');
@@ -50,7 +49,7 @@ function calculate() {
 
         //replace what is not a number or operator for for a void string ''
 
-        let sanitizedExpression = expression.replace(/[^0-9+*-/]/g, '');
+        let sanitizedExpression = expression.replace(/[^0-9+*-/.]/g, '');
 
         /* 
         / / = delimiters of the regEx
@@ -68,3 +67,5 @@ function calculate() {
         display.textContent = 'ERROR';
     }
 }
+
+clear()
