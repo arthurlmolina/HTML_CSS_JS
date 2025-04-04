@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista HTML</title>   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><strong>Exercícios HTML</strong></h1>
+    <br>
+    <h1>1. Crie uma lista de compras utilizando &lt;ul&gt; e &lt;li&gt; (Exemplo: arroz, feijão, leite, pão). </h1>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ul>
+    <ol>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ol>
+    <hr>
+    <h1> 2. Crie uma lista ordenada &lt;ul&gt; e uma lista não ordenada &lt;ul&gt; com pelo menos três itens em cada.
+    </h1>
+    <ol>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ol>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ul>
+    <hr>
+    <h1>3. Crie uma tabela para exibir uma grade de horários de aula com pelo menos 3 colunas e 5 linhas.
+    </h1>
+    <table class="table0">
+        <thead>
+            <tr>
+                <th>Front-End</th>
+                <th>Estrutura de Dados</th>
+                <th>Programação orientada a objeto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Terça-Feira</td>
+                <td>Segunda-feira</td>
+                <td>Quarta-Feira</td>
+            </tr>
+            <tr>
+                <td>Quinta-Feira</td>
+                <td>Quarta-feira</td>
+                <td>Quinta-Feira</td>
+            </tr>
+            <tr>
+                <td>Sexta-Feira</td>
+                <td>Quinta-feira</td>
+                <td>Sexta-Feira</td>
+            </tr>
+            <tr>
+                <td>Sábado</td>
+                <td>Sexta-feira</td>
+                <td>Sábado</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>4. Crie uma tabela que liste 3 produtos, seus preços e quantidade disponível no estoque.</h1>
+    <table class="table0">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Notebook</td>
+                <td>R$2500</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Monitor</td>
+                <td>R$500</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Teclado</td>
+                <td>R$40</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>5. Crie um formulário simples com campos para nome, e-mail e uma área de mensagem.</h1>
+    <form action="">
+        <label for="nome">Nome</label>
+        <input type="text" name="" id="nome">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="" id="email">
+        <br>
+        <br>
+        <textarea type="" name="" id="texto" cols="20" rows="10"> </textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <hr>
+    <h1>6. Adicione um botão de envio ao formulário criado no exercício anterior.
+    </h1>
+    <p>Feito</p>
+    <hr>
+    <h1>7. Crie um campo de senha (&lt;linput type="password"&gt;) em um formulário.
+    </h1>
+    <form action="">
+        <label for="senha">Senha</label>
+        <input type="password" name="" id="senha">
+    </form>
+    <hr>
+    <h1>8. Crie um formulário com um campo de seleção (&lt;select&gt;) para escolher um pais.
+    </h1>
+    <label for="pais"></label>
+    <select name="" id="pais">
+        <option value="" selected>--Selecione um país--</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Brasil">Israel</option>
+        <option value="Brasil">EUA</option>
+    </select>
+    <hr>
+    <h1>9. Crie um campo de seleção (radio button) para escolher entre "Masculino", "Feminino".</h1>
+    <form action="">
+        <label for="masc">Masculino</label>
+        <input type="radio" name="sexo" id="">
+        <br>
+        <label for="fem">Feminino</label>
+        <input type="radio" name="sexo" id="fem">
+       
+    </form>
+    <hr>
+    <h1>10. Crie um botão que abra uma o link https://www.google.com/search?q=tibia%2C+o+melhor+jogo+do+mund
+    </h1>
+    <a href="https://www.google.com/search?q=tibia%2C+o+melhor+jogo+do+mundo">Clique aqui</a>
+    <hr>
+    <h1>11. Crie um link que abra em uma nova aba usando o atributo target="_blank".</h1>
+    <p><a target="_blank" href="https://www.bibliaonline.com.br/acf/livros">Clique aqui</a> para acessar a Bíblia online</p>
+    <hr>
+    <h1>12. Adicione uma imagem à sua página usando a tag &lt;img&gt;.</h1>
+    <img src="imagens/cruz.png" alt="Imagens de uma Cruz reluscente no centro de diversos elementos da natureza, representando o poderio de Jesus Cristo sobre a criação" width="600">
+    <hr>
+    <h1>Crie um link em uma imagem, tomando a imagem clicável.</h1>
+    <h2><b>Clique na imagem</b></h2>
+    <a href="https://www.bibliaonline.com.br/acf/rm/8"><img src="imagens/cruz.png" alt="Imagens de uma Cruz reluscente no centro de diversos elementos da natureza, representando o poderio de Jesus Cristo sobre a criação" width="600"></a>
+    <hr>
+    <h1>14. Crie uma página HTML simples contendo um título <h1>, um parágrafo &lt;p&gt; e uma imagem &lt;img&gt;.</h1>
+    <a target="_blank" href="ex014.html">Ir para página</a>
+    <hr>
+    <h1><strong>Exercícios CSS</strong></h1>
+    <br>
+    <h1>15. Crie uma página HTML e aplique uma cor de fundo ao &lt;body&gt; usando CSS.</h1>
+    <p>Feito</p>
+    <hr>
+    <h1>16. Mude a cor do texto de todos os &lt;h1&gt; para azul usando um seletor CSS.</h1>
+    <p>Feito</p>
+    <hr>
+    <h1 class="destaque">17. Use o seletor class para definir a cor do texto de um parágrafo como vermelho.</h1>
+    <p>feito</p>
+    <hr>
+    <h1>18. Defina uma cor de borda e sua espessura para um bloco &lt;div&gt;.
+    </h1>
+    <div class="quadrado">
+        <p>feito</p>
+    </div>
+    <hr>
+    <h1>19. Defina um tamanho de fonte diferente para os títulos &lt;h1&gt;, &lt;h2&gt;, e &lt;h3&gt;.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>20. Altere o peso da fonte (font-weight) de um texto para negrito (bold).</h1>
+    <p style="font-weight: bold;">texto em negrito</p>
+    <hr>
+    <h1>21. Adicione um espaçamento interno (padding) de 20px a um &lt;div&gt;.
+    </h1>
+    <div style="padding: 20px;" class="quadrado">
+        <p>feito</p>
+    </div>
+    <hr>
+    <h1>22. Adicione uma margem (margin) de 30px ao redor de um parágrafo.
+    </h1>
+    <p style="margin: 30px;">parágrafo com margem</p>
+    <hr>
+    <h1>23. Aplique um raio de borda (border-radius) para criar um botão com cantos arredondados.</h1>
+    <button class="botao">botão 1</button>
+    <button class="botao">botão 2</button>
+    <hr>
+    <h1><strong> Exercícios JavaScript</strong></h1>
+    <br>
+    <h1>24. Exiba um alerta (alert) com a mensagem "Olá, mundo!".</h1>
+    <p>feito</p>
+    <hr>
+    <h1>25. Exiba uma mensagem no console (console.log) dizendo "Meu primeiro script em JavaScript".</h1>
+    <p>feito</p>
+    <hr>
+    <h1>26. Declare duas variáveis, some seus valores e exiba o resultado no console.</h1>
+    <p>feito</p>
+    <hr>
+    <h1>27. Crie um programa que peça ao usuário seu nome e exiba uma saudação com prompt e alert.</h1>
+    <p>feito</p>
+    <hr>
+    <h1>28. Converta um número de string para inteiro usando parseInt e exiba o resultado no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>29. Crie uma variável booleana e exiba seu valor no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>30. Escreva um código que exiba o tipo de uma variável usando typeof.</h1>
+    <p>feito</p>
+    <hr>
+    <h1>31. Peça ao usuário dois números e exiba a soma deles.
+    </h1>
+    <form action="">
+        <label for="inum1"> Digite um número:</label>
+        <input style="margin-left: 12px;" type="number" name="" id="inum1">
+    </form>
+    <br>
+    <br>
+    <form action="">
+        <label for="inum2"> Digite outro número:</label>
+        <input type="number" name="" id="inum2">
+    </form>
+    <br>
+    <button onclick="somar()">Somar</button>
+    <hr>
+    <h1>32. Crie uma variável com um valor inicial e depois modifique seu valor, exibindo no console antes e depois da mudança
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>33. Crie um código que verifica se um número è par ou impar e exiba o resultado no console.
+    </h1>
+    <form action="">
+        <label for="numip">Digite um número e veja se o número é par ou impar</label>
+        <input type="number" name="" id="numip">
+        <button onclick="parOuImpar()">Descobrir</button>
+    </form>
+    <hr>
+    <h1>34. Crie uma variável const e tente reatribuir seu valor (explique o erro no console)
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>35. Crie uma variável let e modifique seu valor ao longo do código
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>36. Crie très variáveis e exiba a média entre elas.
+    </h1>
+    <p>resposta esta no console</p>
+    <hr>
+    <h1>37. Peça ao usuário um número e exiba seu dobro.
+    </h1>
+    <form action="">
+        <label for="num2v">Digite um número para ver o seu dobro: </label>
+        <input type="number" name="" id="num2v">
+        <button onclick="dobrar()">Verificar</button>
+    </form>
+    <hr>
+    <h1>38. Faça um programa que converta temperatura de Celsius para Fahrenheit.
+    </h1>
+    <h2>Conversor de celsius para Fahrenheit</h2>
+    <form action="">
+        <label for="celToFah">Digite os graus celsius: </label>
+        <input type="number" name="" id="celToFah">
+        <button onclick="celsToFah()">Converter</button>
+    </form>
+    <hr>
+    <h1>39. Peça ao usuário a idade e exiba se ele é maior ou menor de idade.
+    </h1>
+    <form action="">
+        <label for="idade">Digite sua idade: </label>
+        <input type="number" name="" id="idade">
+        <button onclick="verIdade()">Verificar</button>
+    </form>
+    <hr>
+    <h1>40. Crie um programa que peça três números ao usuário e exiba o maior deles.
+    </h1>
+    <p><strong>Digite 3 números e veja qual é maior</strong></p>
+    <form action="">
+        <label for="n1">Número 1: </label>
+        <input type="number" name="" id="n1">
+        <br>
+        <br>
+        <label for="n2">Número 2: </label>
+        <input type="number" name="" id="n2">
+        <br>
+        <br>
+        <label for="n3">Número 3: </label>
+        <input type="number" name="" id="n3">
+        <br>
+        <button onclick="verMaior()">Verificar</button>
+    </form>
+    <hr>
+    <h1>41. Escreva um loop for que exiba os números de 1 a 10 no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>42. Escreva um loop while que exiba os números de 10 a 1 no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>43. Crie um loop que peça ao usuário um número até que ele digite um númer malor que 10
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>44. Escreva um loop for que exiba a tabuada do 7 no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>45. Utilize um loop while para calcular a soma de todos os números de 1 a 100.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>46. Faça um loop que exiba apenas os números pares de 1 a 50.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>47. Crie um loop for que percorra um array e exiba cada elemento no console.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>48. Crie um array com cinco nomes e exiba o primeiro e o último elemento
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>49. Adicione um novo nome ao final do array e exiba o array atualizado.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>50. Crie uma função que receba dois números como parâmetros e retome a soma deles</h1>
+    <p>feito</p>
+    <hr>
+    <h1>51. Crie uma função que receba um nome e retorne uma saudação personalizada.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>52. Crie uma função que receba um array de números e retorne a média deles.
+    </h1>
+    <p>feito</p>
+    <hr>
+    <h1>53. Crie um botão em HTML e faça um script que exiba um alerta quando ele for clicado.
+    </h1>
+    <button onclick="alertar()">Clique aqui para disparar um alerta</button>
+    <hr>
+    <h1>54. Mude o conteúdo de um &lt;p&gt; ao clicar em um botão.
+    </h1>
+    <button type="button" onclick="addCont()">Adicionar couteudo</button>
+    <p id="pText">Conteudo de &lt;p&gt;</p>
+    <hr>
+    <h1>55. Alterne a cor de fundo de uma div ao dicar em um botão
+    </h1>
+    <div class="quadrado" id="divChange" style="background-color: green;"></div>
+    <div style="text-align: center; margin-top: 5px;">
+        <button type="button" onclick="changeColor()">Mudar cor do quadrado</button>
+    </div>
+    <hr>
+    <h1>56. Faça um campo de entrada (input) onde o usuário digita seu nome e, ao pressionar um botão, o nome aparece abaixo
+    </h1>
+    <form action=""  >
+        <label for="iname">Digite seu nome: </label>
+        <input type="text" name="" id="iname">
+        <button type="button" onclick="showName()">Clique aqui</button>
+        <p id="pName"></p>
+    </form>
+    <hr>
+    <h1>57. Crie um contador que aumenta o número dentro de um &lt;span&gt; cada vez que um botão é clicado
+    </h1>
+    <button type="button" onclick="soma1()">Somar +1</button>
+    <br>
+    <span id="resSpan">0</span>
+    <hr>
+    <h1>58. Esconda e exiba um texto ao clicar em um botão.
+    </h1>
+    <button type="button" onclick="showNot()">Clique aqui</button>
+    <br>
+    <h3 id="textShow">texto de exemplo</h3>
+    <hr>
+    <h1>59. Altere a imagem de um &lt;img&gt; ao passar o mouse sobre ele.
+    </h1>
+    <img onmouseover="changeImg()" id="cruz" src="imagens/cruz.png" alt="Imagens de uma Cruz reluscente no centro de diversos elementos da natureza, representando o poderio de Jesus Cristo sobre a criação" width="600">
+    <hr>
+    <h1>60. Faça um script que muda o tema da página (modo claro/escuro) ao clicar em um botão</h1>
+    <p>Toque o tema clicando <button type="button" onclick="changeTheme()">aqui</button></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(144, 238, 144);
+}
+
+h1{
+    color: blue;
+    font-size: 30px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 15px;
+}
+
+.table0{
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+.destaque{
+    color: red;
+}
+
+.quadrado{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao{
+    border-radius: 10px;
+}
