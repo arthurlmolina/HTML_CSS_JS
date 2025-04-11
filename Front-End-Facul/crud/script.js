@@ -5,7 +5,8 @@ function add() {
     let idadePreenchida = document.getElementById('idade').value;
     adicionarNoArray(nomePreenchido, idadePreenchida);
     apresentarArray();
-    limparArray();
+    limparCampo('nome');
+    limparCampo('idade');
 }
 
 function adicionarNoArray(nome, idade) {
@@ -26,9 +27,9 @@ function apresentarArray() {
     console.log("------------------------------------------");
 }
 
-function limparArray() {
-    document.getElementById('nome').value = '';
-    document.getElementById('idade').value = '';
+function limparCampo(id) {
+    document.getElementById(id).value = '';
+
 }
 
 function verificar() {
@@ -45,5 +46,24 @@ function verificar() {
     } else {
         alert("Este nome não esta na lista");
     }
-    limparArray()
 }
+
+function remover() {
+    let nomePreenchido = document.getElementById('searchName').value;
+    nomeEncontrado = false;
+    pessoas.forEach(function(item,index){
+        if (nomePreenchido == item.nome){
+            pessoas.splice(index, 1);
+            nomeEncontrado = true;
+        }
+
+    });
+
+    if (nomeEncontrado){
+        alert("Nome excluído com sucesso!");
+        apresentarArray();
+    } else{
+        alert("Não foi possível encontrar este nome na lista");
+    }
+    limparCampo('searchName');
+};
