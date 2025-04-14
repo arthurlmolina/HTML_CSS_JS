@@ -1,6 +1,7 @@
 # HTML_CSS_JS
  Praticando o desenvolvimento web 
-Alguns projetos: 
+ 
+Alguns projetos abaixo:
 
 Calculadora: https://arthurlmolina.github.io/HTML_CSS_JS/Projetos/calculadora/index.html
 
