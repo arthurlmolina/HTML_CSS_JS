@@ -1,5 +1,7 @@
-fetch('https://pokeapi.co/api/v2/').then(function(requestMade){
+fetch('https://pokeapi.co/api/v2/pokemon/')
+.then(function(requestMade){
     return requestMade.json();
-}).then(function (jsonMade){
+})
+.then(function (jsonMade){
     console.log(jsonMade);
 })

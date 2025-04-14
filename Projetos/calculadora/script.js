@@ -28,7 +28,7 @@ function add(num) {
 }
 
 function calculate() {
-    const display = document.getElementById('resp');
+    let display = document.getElementById('resp');
     let expression = display.textContent;
 
     if (expression === 'Display') {
