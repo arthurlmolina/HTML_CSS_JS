@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <form action="">
+        <p>Agenda</p>
+        <label for="inome">Nome</label>
+        <input type="text" name="" id="inome">
+        <label for="itel">Telefone</label>
+        <input type="tel" name="" id="itel">
+        <br>
+        <br>
+        <button type="button" onclick="add()">Adicionar</button>
+        <br><br>
+ 
+        <label for="inome2">Nome: </label>
+        <input type="text" name="" id="inome2">
+        <label for="iedit">Novo nome: </label>
+        <input type="text" name="" id="iedit">
+        <br><br>
+        <button type="button" onclick="atualizar()">Atualizar</button>
+        <br>
+        <br>
+        <label for="inome3">Nome: </label>
+        <input type="text" value="" id="inome3">
+        <br>
+        <br>
+        <button type="button" onclick="excluir()">Excluir</button>
+        <br><br>
+        <label for="nomeVerific">Nome: </label>
+        <input type="text" id="nomeVerific">
+        <label for="telVerific">Telefone: </label>
+        <input type="text" id="telVerific">
+        <br><br>
+        <button type="button" onclick="verificar()">Verificar existência</button>
+
+
+        <div id="agenda"></div>
+    </form>
+    <script>
+        let agenda = [];
+        function add(){
+            let nome = document.getElementById("inome").value;
+            let tel = document.getElementById("itel").value;
+            addNoArray(nome,tel);
+        }
+        function addNoArray(nome,tel){
+            agenda.push(
+                {
+                    nome: nome,
+                    telefone: tel
+                }
+            )
+            apresentaArray();
+        }
+
+        function apresentaArray(){
+            let div = document.getElementById("agenda");
+            div.innerText = '';
+            div.innerText = (`-----------------------------`);
+            agenda.forEach(function(item,index){
+                div.innerHTML += (`<br>Nome: ${item.nome}&nbsp;&nbsp;&nbsp;   Telefone: ${item.telefone}<br>`)
+            });
+            div.innerText += (`-----------------------------`);
+        }
+
+
+
+        
+        function atualizar(){
+            let nomeOld = document.getElementById("inome2").value;
+            let nomeNew = document.getElementById("iedit").value;
+            let nomeIgual = agenda.findIndex(function(item, index){
+                return item.nome == nomeOld;
+            })
+            agenda[nomeIgual].nome = nomeNew;
+            apresentaArray();
+        }
+
+        function excluir(){
+            let nome = document.getElementById("inome3").value;
+            nomeEncontrado = agenda.findIndex(function(item){
+                return item.nome == nome;
+            });
+            if (nomeEncontrado == -1){
+                alert('Não foi possivel achar este contato');
+            } else{
+                alert(" excluido com sucesso!")
+                agenda.splice(nomeEncontrado,1)
+            }
+            apresentaArray();
+        }
+        function verificar(){
+            let nome1 = document.getElementById("nomeVerific").value;
+            let telef = document.getElementById("telVerific").value;
+            contatoEncontrado= false;
+            agenda.forEach(function(item,index){
+                if (item.nome==nome1 && item.telefone==telef){
+                    contatoEncontrado = true;
+                }
+            })
+            if (contatoEncontrado){
+                alert("Este contato está cadastrado");
+            } else{
+                alert("Este contato não está cadastrado");
+            }
+        }
+
+    </script>
+</body>
+</html>
